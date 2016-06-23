@@ -5,7 +5,7 @@ import routing from './<%= name %>.routes';
 import './<%= name %>.scss';
 
 export default angular
-  .module('quiApp.main', [uiRouter])
+  .module('<%= scriptAppName %>', [uiRouter])
   .config(routing)
-  .component('main', <%= classedName %>Component)
+  .component('<%= name %>', <%= classedName %>Component)
   .name;
