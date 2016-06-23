@@ -1,17 +1,17 @@
-'use strict';
-
-describe('Service: <%= cameledName %>', function () {
+/* eslint-env mocha */
+/* global expect:false, inject:false */
+describe('Service: <%= classedName %>', () => {
 
   // load the service's module
-  beforeEach(module('<%= scriptAppName %>'));
+  beforeEach(angular.mock.module('<%= scriptAppName %>'));
 
   // instantiate service
-  var <%= cameledName %>;
-  beforeEach(inject(function (_<%= cameledName %>_) {
+  let <%= cameledName %>;
+  beforeEach(inject((_<%= cameledName %>_) => {
     <%= cameledName %> = _<%= cameledName %>_;
   }));
 
-  it('should do something', function () {<% if (hasFilter('jasmine')) { %>
+  it('should do something', () => {<% if (hasFilter('jasmine')) { %>
     expect(!!<%= cameledName %>).toBe(true);<% } if (hasFilter('mocha')) { %>
     <%= expect() %>!!<%= cameledName %><%= to() %>.be.true;<% } %>
   });

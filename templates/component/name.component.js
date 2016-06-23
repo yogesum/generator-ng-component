@@ -1,12 +1,10 @@
-'use strict';
+import controller from './<%= name %>.controller';
+import template from './<%= name %>.jade';
 
-function <%= cameledName %>Controller() 
-  this.message = 'World';
-}
+const <%= classedName %>Component = {
+  template,
+  controller,
+  bindings: { message: '<' },
+};
 
-angular.module('<%= scriptAppName %>')
-  .component('<%= cameledName %>', {
-    template: '<h1>Hello {{ $ctrl.message }}</h1>',
-    bindings: { message: '<' },
-    controller: <%= cameledName %>Controller
-});
+export default <%= classedName %>Component;

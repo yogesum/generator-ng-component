@@ -1,10 +1,9 @@
-'use strict';
+export default function <%= name %>RouteConfig($stateProvider) {
+  'ngInject';
 
-angular.module('<%= scriptAppName %>')
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('<%= name %>', {
-        url: '<%= route %>',
-        template: '<<%= kebabName %>></<%= kebabName %>>'
-      });
-  });
+  $stateProvider
+    .state('<%= name %>', {
+      url: '<%= route %>',
+      template: '<<%= kebabName %>></<%= kebabName %>>'
+    });
+}

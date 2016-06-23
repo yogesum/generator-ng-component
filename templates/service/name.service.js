@@ -1,8 +1,12 @@
-'use strict';
+class <%= classedName %>Service {
+  constructor($http) {
+    'ngInject';
+    this.$http = $http;
+  }
 
-function <%= cameledName %>Service() {
-	// AngularJS will instantiate a singleton by calling "new" on this function
+  getTodos() {
+    return this.$http.get('/api/todos').then(response => response.data);
+  }
 }
 
-angular.module('<%= scriptAppName %>')
-  .service('<%= cameledName %>', <%= cameledName %>Service);
+export default TodoService;
