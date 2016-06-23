@@ -1,6 +1,6 @@
 class <%= classedName %>Controller {
   /* @ngInject */
-  constructor($http) {
+  constructor() {
     this.message = 'Hello';
   }
 

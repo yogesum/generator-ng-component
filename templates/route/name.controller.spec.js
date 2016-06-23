@@ -2,7 +2,7 @@
 /* global expect:false, inject:false */
 import <%= name %> from './<%= name %>.component';
 
-describe('Component: <%= classedName %>Component', function () {
+describe('Component: <%= classedName %>Component', () => {
 
   // load the controller's module
   beforeEach(angular.mock.module(<%= name %>));

@@ -1,18 +1,20 @@
-'use strict';
+/* eslint-env mocha */
+/* global expect:false, inject:false */
+import <%= name %> from './<%= name %>.component';
 
-describe('Controller: <%= classedName %>Ctrl', function () {
+describe('Component: <%= classedName %>Component', () => {
 
   // load the controller's module
-  beforeEach(module('<%= scriptAppName %>'));
+  beforeEach(angular.mock.module(<%= name %>));
 
-  var <%= classedName %>Ctrl;
+  let <%= classedName %>Component;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller) {
-    <%= classedName %>Ctrl = $controller('<%= classedName %>Ctrl', {});
+  beforeEach(inject(($componentController) => {
+    <%= classedName %>Component = $componentController('<%= name %>', {});
   }));
 
-  it('should ...', function () {<% if (hasFilter('jasmine')) { %>
+  it('should ...', () => {<% if (hasFilter('jasmine')) { %>
     expect(1).toEqual(1);<% } if (hasFilter('mocha')) { %>
     <%= expect() %>1<%= to() %>.equal(1);<% } %>
   });

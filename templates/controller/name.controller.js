@@ -1,8 +1,11 @@
-'use strict';
+class <%= classedName %>Controller {
+  /* @ngInject */
+  constructor() {
+    this.message = 'Hello';
+  }
 
-function <%= cameledName %>Controller() {
-  this.message = 'Hello';
+  $onInit() {
+  }
 }
 
-angular.module('<%= scriptAppName %>')
-  .controller('<%= classedName %>Controller', <%= cameledName %>Controller);
+export default <%= classedName %>Controller;
