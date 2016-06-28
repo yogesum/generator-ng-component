@@ -9,4 +9,4 @@ class <%= classedName %>Service {
   }
 }
 
-export default TodoService;
+export default <%= classedName %>Service;
