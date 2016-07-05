@@ -7,5 +7,5 @@ import './<%= name %>.scss';
 export default angular
   .module('<%= scriptAppName %>', [uiRouter])
   .config(routing)
-  .component('<%= name %>', <%= classedName %>Component)
+  .component('<%= cameledName %>', <%= classedName %>Component)
   .name;
